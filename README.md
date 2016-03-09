@@ -1,4 +1,4 @@
-## web-server
+## web-server boiler-plate code
 A simple web-server using node and express.
 
 To use it:
