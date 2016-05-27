@@ -8,7 +8,6 @@ var APP_ID = '';
 
 var USER_1 = '';
 
-
 app.use(middleWare.logger);
 
 
@@ -29,7 +28,7 @@ app.get('/amf/:id/:accessToken/:friendsId',function(request,response){
 		.end(function (response) {
   		console.log(response.body);
 	});
-}
+});
 
 app.get('/test',function(request,response){
 
@@ -39,8 +38,8 @@ app.get('/test',function(request,response){
 	//var friendsId  = request.params.friendsId;
 	//var request = unirest.get('https://graph.facebook.com/762088223834224?fields=context.fields(mutual_friends)')
 
-	unirest.get('https://graph.facebook.com/762088223834224?fields=context.fields(mutual_friends)')
-		.send({ "access_token" : USER_ACCESS_TOKEN, "appsecret_proof": app_proof})
+	unirest.get('https://graph.facebook.com/762088223834224')
+		.send({ "fields" : "context.fields(mutual_friends)", "access_token" : USER_ACCESS_TOKEN, "appsecret_proof": app_proof})
 		.end(function (response) {
   		console.log(response.body);
 	});
@@ -48,11 +47,4 @@ app.get('/test',function(request,response){
 	//CALL = 762088223834224?fields=context.fields(mutual_friends) 
 	//876817392379251
 
-});
-
-
-app.use(express.static(__dirname+"/public"));
-
-app.listen(3100,function(){
-	console.log('Server running on port number 3100');
 });
