@@ -42,8 +42,7 @@ app.get('/test',function(request,response){
   	console.log(hashInBase64);
 
 	unirest.get('https://graph.facebook.com/762088223834224')
-		.headers({"access_token" : USER_ACCESS_TOKEN, "appsecret_proof": hashInBase64})
-		.send({ "fields" : "context.fields(mutual_friends)"})
+		.send({ "access_token" : USER_ACCESS_TOKEN, "appsecret_proof": hashInBase64, "fields" : "context.fields(mutual_friends)"})
 		.end(function (response) {
   		console.log(response.body);
 	});
