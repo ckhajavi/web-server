@@ -4,9 +4,9 @@ var SHA256 = require("crypto-js/hmac-sha256.js")
 var Crypto = require("crypto-js");
 var middleWare = require('./middleWare.js');
 var unirest = require('unirest');
-var USER_ACCESS_TOKEN = 'EAACEdEose0cBAFiAEhi1X2WiWgEyMlGXFE1rKoIHJRkZBMcwjrEgvZCPkNrEb2VzDy5Lt8iFWsIWngsUjKdizZCxYetgnZCpDQWVkZAaJCV2ZB2YtpX4dpnihLsZAkQhhPxJZBOqfoCnWdPs7XGTe2CcylpUeThodCBLk3AXzmxmlkm1gbcLMlWS';
-var APP_ID = '1016247148423251';
-var APP_SECRET = '901271404bee861b0810763d5d4ca8d4';
+var USER_ACCESS_TOKEN = '';
+var APP_ID = '';
+var APP_SECRET = '';
 
 
 var USER_1 = '';
